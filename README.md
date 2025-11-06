@@ -20,7 +20,7 @@ The project demonstrates how frameworks such as **LangChain**, **ChromaDB**, and
 |--------|--------------|-------------------|
 | **Finance FAQ Chatbot** | Answers 1,700+ banking and finance FAQs using vector similarity search and LLM reasoning. | LangChain, ChromaDB, Sentence Transformers, FLAN-T5 |
 | **Economic Report Generator** | Generates analytical market reports and LLM-interpreted insights from global index data. | yFinance, Pandas, Plotly, LangChain |
-| **Fraud Detection Assistant** | Detects transaction anomalies using unsupervised ML and computes severity/risk scores. | IsolationForest, Scikit-learn, Streamlit |
+| **Fraud Detection Assistant** | Detects transaction anomalies using unsupervised ML and computes severity/risk scores. | IsolationForest, scikit-learn, Streamlit |
 | **News Summarizer & Bias Analyzer** | Performs financial news sentiment and bias analysis with AI-generated summaries. | BeautifulSoup, VADER, Requests |
 
 ---
@@ -37,6 +37,10 @@ _Example:_
 **Q:** What is NEFT?  
 **A:** NEFT is an electronic fund transfer system that operates on a deferred net settlement basis between bank branches in India.
 
+#### Screenshots
+![Chatbot Screenshot 1](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/1.jpg)
+![Chatbot Screenshot 2](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/2.jpg)
+
 ---
 
 ### 2. Economic Report Generator
@@ -46,7 +50,11 @@ _Example:_
 - Summarizes findings with **LLM-based narrative insights**.
 
 _Example Insight:_  
-Between Aug–Nov 2025, NIFTY 50 rose 4.1%, correlating 0.77 with S&P 500 — indicating strong global co-movement.
+Between Aug–Nov 2025, NIFTY 50 rose 4.1 %, correlating 0.77 with S&P 500 — indicating strong global co-movement.
+
+#### Screenshots
+![Economic Report 1](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/Economic%20Report%20Generator/1.jpg)
+![Economic Report 2](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/Economic%20Report%20Generator/2.jpg)
 
 ---
 
@@ -57,7 +65,14 @@ Between Aug–Nov 2025, NIFTY 50 rose 4.1%, correlating 0.77 with S&P 500 — in
 - Provides visual analytics for merchant, time, and correlation patterns.
 
 _Example Result:_  
-5.6% of transactions flagged as potentially fraudulent due to high-value spikes or unusual activity time.
+5.6 % of transactions flagged as potentially fraudulent due to high-value spikes or unusual activity time.
+
+#### Screenshots
+![Fraud Detection 1](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/Fraud%20Detection%20Assistant/1.1.jpg)
+![Fraud Detection 2](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/Fraud%20Detection%20Assistant/3jpg)
+![Fraud Detection 3](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/Fraud%20Detection%20Assistant/4.jpg)
+![Fraud Detection 4](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/Fraud%20Detection%20Assistant/5.jpg)
+![Fraud Detection 5](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/Fraud%20Detection%20Assistant/6.jpg)
 
 ---
 
@@ -69,7 +84,12 @@ _Example Result:_
 - Generates concise comparative summaries using a summarization model.
 
 _Example Insight:_  
-Reliance Industries received 61% positive coverage, while Tata Motors had 44% neutral tone — reflecting cautious investor sentiment.
+Reliance Industries received 61 % positive coverage, while Tata Motors had 44 % neutral tone — reflecting cautious investor sentiment.
+
+#### Screenshots
+![News Summarizer 1](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/News%20Summarizer/1.jpg)
+![News Summarizer 2](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/News%20Summarizer/2.jpg)
+![News Summarizer 3](https://github.com/SOHAN562001/finance_ai_suite/blob/main/assets/News%20Summarizer/3.jpg)
 
 ---
 
@@ -78,13 +98,13 @@ Reliance Industries received 61% positive coverage, while Tata Motors had 44% ne
 | Layer | Tools and Libraries |
 |-------|---------------------|
 | **Frontend UI** | Streamlit with custom CSS (dark theme, modular layout) |
-| **Backend AI/NLP** | LangChain, Hugging Face Transformers |
+| **Backend AI / NLP** | LangChain, Hugging Face Transformers |
 | **Vector Database** | ChromaDB |
 | **Data APIs** | Yahoo Finance (`yfinance`), Google News RSS |
-| **Machine Learning / Analytics** | Scikit-learn, Pandas, NumPy |
+| **Machine Learning / Analytics** | scikit-learn, Pandas, NumPy |
 | **Visualization** | Matplotlib, Plotly |
 | **Sentiment Analysis** | VADER (NLTK) |
-| **Deployment Ready** | Streamlit Cloud / AWS EC2 |
+| **Deployment** | Streamlit Cloud / AWS EC2 |
 
 ---
 
@@ -113,22 +133,26 @@ Copy code
 
 finance_ai_suite/
 │
-├── app.py # Main Streamlit entry point
-├── requirements.txt # Dependencies
+├── app.py
+├── requirements.txt
 │
 ├── modules/
-│ ├── faq_chatbot.py # RAG-based chatbot
-│ ├── economic_report.py # Market analysis
-│ ├── fraud_detection.py # Anomaly detection logic
-│ ├── news_summarizer.py # Sentiment & bias analysis
-│ └── utils.py # Helper utilities
+│ ├── faq_chatbot.py
+│ ├── economic_report.py
+│ ├── fraud_detection.py
+│ ├── news_summarizer.py
+│ └── utils.py
 │
 ├── data/
 │ ├── bank_faqs.csv
 │ ├── chroma_bank_faqs/
 │ └── fraud_transactions_realistic.csv
 │
-└── README.md
+└── assets/
+├── Finance FAQ Chatbot/
+├── Economic Report Generator/
+├── Fraud Detection Assistant/
+└── News Summarizer/
 
 yaml
 Copy code
@@ -139,7 +163,7 @@ Copy code
 
 **1. Clone the Repository**
 ```bash
-git clone https://github.com/yourusername/finance_ai_suite.git
+git clone https://github.com/SOHAN562001/finance_ai_suite.git
 cd finance_ai_suite
 2. Install Dependencies
 
@@ -154,41 +178,18 @@ streamlit run app.py
 4. Open in Browser
 http://localhost:8501
 
-Screenshots (to be added)
-Add 10–12 screenshots in this section after running the app:
-
-Home Dashboard
-
-Finance Chatbot Query
-
-Economic Report Graphs
-
-Fraud Detection Visualization
-
-Customer Risk Index
-
-News Sentiment Charts
-
-Correlation Heatmap
-
-AI Summary Block
-
-Data Upload Interface
-
-Overall System Interface
-
 Evaluation Summary
 Module	Status	Key Metric	Result
-FAQ Chatbot	Completed	90% Contextual Precision	Excellent
+FAQ Chatbot	Completed	90 % Contextual Precision	Excellent
 Economic Report	Completed	r > 0.75 Correlation	Excellent
-News Summarizer	Completed	~85% Sentiment Accuracy	Reliable
-Fraud Detection	Completed	IsolationForest (unsupervised)	Robust
+News Summarizer	Completed	~85 % Sentiment Accuracy	Reliable
+Fraud Detection	Completed	IsolationForest (Unsupervised)	Robust
 
 Challenges and Solutions
 Challenge	Solution
 Yahoo API Rate Limits	Added fallback to Google News RSS
-Chroma Cache Conflicts	Auto-cleared cache and unique session IDs
-Visualization Lag	Optimized with st.cache_data()
+Chroma Cache Conflicts	Auto-cleared cache with unique session IDs
+Visualization Lag	Optimized using st.cache_data()
 Model Memory Usage	Switched to lightweight FLAN-T5 models
 
 Future Enhancements
@@ -206,25 +207,7 @@ Author
 Sohan Ghosh
 M.Sc. in Data Science & Artificial Intelligence
 University of Calcutta
-📍 Kolkata, India
-LinkedIn
+
 
 “Merging data science, AI, and finance to build intelligent decision systems.”
 
-License
-This project is licensed under the MIT License.
-You may reuse, modify, or extend it with proper attribution.
-
-Acknowledgements
-LangChain — for modular RAG pipelines
-
-Hugging Face — for open-source transformer models
-
-Streamlit — for rapid and interactive UI
-
-Yahoo Finance & Google News — for open data APIs
-
-University of Calcutta — for academic support and mentorship
-
-“Finance AI Suite transforms data into intelligence, and intelligence into insight.”
-— Sohan Ghosh (2025)
